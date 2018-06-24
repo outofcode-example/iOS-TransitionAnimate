@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="TransitionAnimateTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Go-Xs-IJJ">
+                                <rect key="frame" x="147.5" y="70" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7d7-Tb-7rM"/>
+                                    <constraint firstAttribute="width" constant="80" id="DUI-1W-DHy"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didClickNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2P-GC-ioM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Go-Xs-IJJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HSh-N5-vUG"/>
+                            <constraint firstItem="6Go-Xs-IJJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="RQz-aJ-jg3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="6Go-Xs-IJJ" id="oxw-Kl-sNr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="34"/>
+        </scene>
+        <!--Present View Controller-->
+        <scene sceneID="XWd-h1-92q">
+            <objects>
+                <viewController storyboardIdentifier="Present" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kG3-z5-LSa" customClass="PresentViewController" customModule="TransitionAnimateTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eO1-kN-uzs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTX-Ik-jbF">
+                                <rect key="frame" x="147.5" y="70" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Ps0-Yg-MLy"/>
+                                    <constraint firstAttribute="height" constant="80" id="i3y-sn-cHf"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="didClickClose:" destination="kG3-z5-LSa" eventType="touchUpInside" id="lW9-5P-1Rz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fTX-Ik-jbF" firstAttribute="centerX" secondItem="NUF-4q-Q0u" secondAttribute="centerX" id="FDH-zk-7Qq"/>
+                            <constraint firstItem="fTX-Ik-jbF" firstAttribute="top" secondItem="NUF-4q-Q0u" secondAttribute="top" constant="50" id="y26-jc-nPk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NUF-4q-Q0u"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="fTX-Ik-jbF" id="saX-qM-GJL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1P-YO-IHx" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="34"/>
+        </scene>
+    </scenes>
+</document>
